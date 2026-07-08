@@ -33,7 +33,11 @@ DEBUG = os.getenv("DEBUG") == "True"
 
 DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "web-dev-b9b2.onrender.com",
+    "regionwebllc.com",
+    "www.regionwebllc.com",
+]
 
 RENDER_EXTERNAL_HOSTNAME = os.getenv("RENDER_EXTERNAL_HOSTNAME")
 if RENDER_EXTERNAL_HOSTNAME:
