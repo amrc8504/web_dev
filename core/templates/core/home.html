@@ -10,7 +10,7 @@
 <body>
 
   <header class="navbar">
-    <h2>Anthony Ryan</h2>
+    <h2>Region Web</h2>
     <nav>
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
@@ -30,7 +30,7 @@
         </h1>
 
         <p>
-            I build fast, modern websites that make a great first
+            Hi, I'm Anthony. I build fast, modern websites that make a great first
             impression and help turn visitors into customers.
         </p>
 
@@ -129,6 +129,15 @@
 </section>
 
   <section id="contact" class="section contact-section">
+    {% if messages %}
+  <div class="message-wrapper">
+    {% for message in messages %}
+      <div class="success-message">
+        {{ message }}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
   <div class="contact-wrapper">
 
     <div class="contact-info">
@@ -147,8 +156,13 @@
       </div>
     </div>
 
-    <form class="contact-form" method="post">
+    <form class="contact-form" method="POST">
       {% csrf_token %}
+
+      <div class="hidden-field">
+  <label for="website">Website</label>
+  <input type="text" id="website" name="website" autocomplete="off">
+</div>
 
       <div class="form-group">
         <label for="name">Your Name *</label>
@@ -175,7 +189,7 @@
         <textarea id="message" name="message" rows="5" placeholder="Tell me about your business and what you want your website to do..." required></textarea>
       </div>
 
-      <button type="submit" class="btn form-btn">Request a Free Quote</button>
+      <button type="submit" class="btn form-btn" id="submitBtn">Request a Free Quote</button>
 
       <p class="form-note">
         No spam. No pressure. Just a simple conversation about your website.
@@ -189,5 +203,17 @@
     <p>© 2026 Region Web. Websites for local small businesses.</p>
   </footer>
 
+
+  <script>
+  const contactForm = document.querySelector(".contact-form");
+  const submitBtn = document.querySelector("#submitBtn");
+
+  if (contactForm && submitBtn) {
+    contactForm.addEventListener("submit", function () {
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Sending...";
+    });
+  }
+</script>
 </body>
 </html>

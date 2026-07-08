@@ -632,3 +632,28 @@ footer{
     font-size: 2rem;
   }
 }
+
+.hidden-field {
+  display: none;
+}
+
+.message-wrapper {
+  grid-column: span 2;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.success-message {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #86efac;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.form-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
