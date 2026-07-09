@@ -662,3 +662,34 @@ footer{
   opacity: 0.7;
   cursor: not-allowed;
 }
+
+.announcement-bar {
+    background: linear-gradient(90deg, #14532d, #166534);
+    color: white;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.announcement-bar strong {
+    color: #facc15;
+}
+
+.announcement-bar button {
+    position: absolute;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.announcement-bar button:hover {
+    opacity: 1;
+}

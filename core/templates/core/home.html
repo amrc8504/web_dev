@@ -19,6 +19,15 @@
     </nav>
   </header>
 
+  <div class="announcement-bar" id="announcementBar">
+    <span>
+        🎉 <strong>Grand Opening:</strong> First <strong>5 businesses</strong> receive <strong>5% OFF</strong> their website! &nbsp;|&nbsp;
+        <strong>10% OFF</strong> for Military & First Responders.
+    </span>
+
+    <button id="closeAnnouncement">&times;</button>
+</div>
+
   <section class="hero">
 
     <div class="hero-text">
@@ -216,5 +225,19 @@
     });
   }
 </script>
+<script>
+const announcement = document.getElementById("announcementBar");
+const closeBtn = document.getElementById("closeAnnouncement");
+
+if (localStorage.getItem("announcementClosed")) {
+    announcement.style.display = "none";
+}
+
+closeBtn.addEventListener("click", () => {
+    announcement.style.display = "none";
+    localStorage.setItem("announcementClosed", "true");
+});
+</script>
+
 </body>
 </html>
