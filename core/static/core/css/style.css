@@ -693,3 +693,328 @@ footer{
 .announcement-bar button:hover {
     opacity: 1;
 }
+
+/* ===========================
+   WHAT YOU GET
+=========================== */
+
+.what-you-get {
+  background: #ffffff;
+}
+
+.what-you-get-header {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.section-label {
+  display: inline-block;
+  color: #c2410c;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.what-you-get-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.what-you-get-header p {
+  color: #4b5563;
+  font-size: 1.05rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  background: #fdfaf7;
+  border: 1px solid #f1e7dc;
+  border-radius: 14px;
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.checkmark {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: #c2410c;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.benefit-item h3 {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: #172033;
+}
+
+.benefit-item p {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .what-you-get-header h2 {
+    font-size: 2rem;
+  }
+
+  .benefit-item {
+    padding: 20px;
+  }
+}
+
+/* ===========================
+   HOW IT WORKS
+=========================== */
+
+.how-it-works {
+  padding: 90px 8%;
+  background: #fdfaf7;
+}
+
+.how-header {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.how-header .section-label {
+  display: inline-block;
+  color: #c2410c;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.how-header h2 {
+  font-size: 2.5rem;
+  color: #172033;
+  margin-bottom: 14px;
+}
+
+.how-header p {
+  color: #4b5563;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Steps container */
+.steps {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Vertical line */
+.steps::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 29px;
+  width: 2px;
+  background: #e8c7b3;
+}
+
+/* Individual step */
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.step:last-child {
+  margin-bottom: 0;
+}
+
+/* Number circle */
+.step-number {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #c2410c;
+  color: white;
+
+  border-radius: 50%;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  position: relative;
+  z-index: 2;
+
+  box-shadow: 0 5px 15px rgba(194, 65, 12, 0.2);
+}
+
+/* Step card */
+.step-content {
+  flex: 1;
+  background: white;
+  padding: 24px 28px;
+  border-radius: 14px;
+  border: 1px solid #f1e7dc;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.step-content:hover {
+  transform: translateX(5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+.step-content h3 {
+  color: #172033;
+  font-size: 1.2rem;
+  margin-bottom: 7px;
+}
+
+.step-content p {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* Bottom CTA */
+.how-cta {
+  text-align: center;
+  margin-top: 55px;
+}
+
+.how-cta p {
+  color: #172033;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px) {
+
+  .how-it-works {
+    padding: 70px 7%;
+  }
+
+  .how-header {
+    margin-bottom: 45px;
+  }
+
+  .how-header h2 {
+    font-size: 2rem;
+  }
+
+  .steps::before {
+    left: 23px;
+  }
+
+  .step {
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .step-number {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 1rem;
+  }
+
+  .step-content {
+    padding: 20px;
+  }
+
+  .step-content:hover {
+    transform: none;
+  }
+}
+
+
+/* ===========================
+   SMALL PHONES
+=========================== */
+
+@media (max-width: 400px) {
+
+  .how-it-works {
+    padding: 60px 20px;
+  }
+
+  .how-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .how-header p {
+    font-size: 0.95rem;
+  }
+
+  .steps::before {
+    display: none;
+  }
+
+  .step {
+    gap: 12px;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 0.9rem;
+  }
+
+  .step-content {
+    padding: 17px;
+  }
+
+  .step-content h3 {
+    font-size: 1.05rem;
+  }
+
+  .step-content p {
+    font-size: 0.9rem;
+  }
+}
