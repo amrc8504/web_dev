@@ -6,7 +6,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/x-icon" href="{% static 'core/images/rwicon.ico' %}">
   <title>Region Web | Websites for small businesses</title>
-  <link rel="stylesheet" href="{% static 'core/css/style.css' %}?v=8" />
+  <style>
+  .premium-showcase {
+    position: relative;
+    min-height: 260vh;
+    background: linear-gradient(180deg, #0b0f19 0%, #111827 100%);
+    color: white;
+  }
+
+  .showcase-sticky {
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 60px;
+    padding: 110px 7%;
+  }
+
+  .showcase-heading {
+    position: relative;
+    z-index: 3;
+    max-width: 620px;
+  }
+
+  .showcase-label {
+    color: #fb923c;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin-bottom: 18px;
+  }
+
+  .showcase-heading h2 {
+    color: white;
+    font-size: clamp(2.4rem, 4.7vw, 5rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    margin-bottom: 24px;
+  }
+
+  .showcase-heading > p:last-child {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    line-height: 1.75;
+  }
+
+  .website-stage {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .website-browser {
+    position: relative;
+    z-index: 2;
+    width: min(760px, 100%);
+    aspect-ratio: 16 / 10;
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+  }
+
+  .browser-bar {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 18px;
+    background: #edf0f4;
+  }
+
+  .browser-content {
+    height: calc(100% - 48px);
+    background: #fffaf6;
+  }
+
+  @media (max-width: 950px) {
+    .showcase-sticky {
+      grid-template-columns: 1fr;
+      align-content: center;
+      text-align: center;
+      gap: 35px;
+      padding: 90px 7% 60px;
+    }
+
+    .showcase-heading {
+      margin: 0 auto;
+    }
+
+    .website-browser {
+      width: min(650px, 92vw);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .showcase-sticky {
+      padding: 80px 20px 40px;
+      gap: 28px;
+    }
+
+    .showcase-heading h2 {
+      font-size: 2.15rem;
+      margin-bottom: 16px;
+    }
+
+    .showcase-heading > p:last-child {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .website-browser {
+      width: 96vw;
+      border-radius: 14px;
+    }
+
+    .mock-features {
+      display: none;
+    }
+  }
+</style>
+
+<link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/style.css' %}?v=9" />
 </head>
 <body>
 
