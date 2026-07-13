@@ -7,7 +7,7 @@
   <link rel="icon" type="image/x-icon" href="{% static 'core/images/rwicon.ico' %}">
   <title>Region Web | Websites for small businesses</title>
   <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
-  <link rel="stylesheet" href="{% static 'core/css/style.css' %}?v=10" />
+  <link rel="stylesheet" href="{% static 'core/css/style.css' %}?v=11" />
 </head>
 <body>
 
@@ -82,94 +82,76 @@
     </div>
   </section>
 
-  <section class="section dark">
-    <h2>Why Work With Me?</h2>
+<section class="premium-preview">
+  <div class="premium-preview-copy">
+    <span class="section-label">BUILT TO STAND OUT</span>
+
+    <h2>A professional website your business can be proud of.</h2>
+
     <p>
-      Most small businesses do not need a huge, expensive website. They need something clean, fast, mobile-friendly, and easy for customers to understand.
+      Clean design, strong messaging, and a smooth experience across phones,
+      tablets, and desktops.
     </p>
-    <p>
-      My goal is to give local businesses an affordable online presence that looks professional and helps people reach out.
-    </p>
-  </section>
 
-  <section class="premium-showcase" id="showcase">
-
-  <div class="showcase-sticky">
-
-    <div class="showcase-heading">
-      <p class="showcase-label">BUILT TO MAKE AN IMPRESSION</p>
-
-      <h2 id="showcaseTitle">
-        Your business deserves more than a basic website.
-      </h2>
-
-      <p id="showcaseDescription">
-        Every website is designed to look professional, load quickly, and work
-        beautifully on every screen.
-      </p>
+    <div class="preview-points">
+      <div><span>✓</span> Mobile responsive</div>
+      <div><span>✓</span> Fast and secure</div>
+      <div><span>✓</span> Built around your business</div>
     </div>
 
-    <div class="website-stage">
-
-      <div class="website-glow"></div>
-
-      <div class="website-browser" id="websiteBrowser">
-
-        <div class="browser-bar">
-          <div class="browser-dots">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div class="browser-address">
-            yourbusiness.com
-          </div>
-        </div>
-
-        <div class="browser-content">
-
-          <div class="mock-navbar">
-            <div class="mock-logo">YOUR BUSINESS</div>
-
-            <div class="mock-links">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-
-          <div class="mock-hero">
-
-            <div class="mock-copy">
-              <div class="mock-eyebrow"></div>
-              <div class="mock-title"></div>
-              <div class="mock-title short"></div>
-              <div class="mock-paragraph"></div>
-              <div class="mock-paragraph small"></div>
-              <div class="mock-button"></div>
-            </div>
-
-            <div class="mock-image"></div>
-
-          </div>
-
-          <div class="mock-features">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
+    <a href="#contact" class="btn">Start Your Website</a>
   </div>
 
-  <div class="showcase-scroll-space"></div>
+  <div class="premium-preview-visual">
+    <div class="preview-glow"></div>
 
+    <div class="preview-browser">
+      <div class="preview-browser-bar">
+        <div class="preview-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="preview-address">yourbusiness.com</div>
+      </div>
+
+      <div class="preview-page">
+        <div class="preview-nav">
+          <strong>YOUR BUSINESS</strong>
+
+          <div class="preview-nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="preview-hero">
+          <div class="preview-text">
+            <span class="preview-accent"></span>
+            <span class="preview-line preview-line-lg"></span>
+            <span class="preview-line preview-line-md"></span>
+            <span class="preview-line preview-line-sm"></span>
+            <span class="preview-line preview-line-xs"></span>
+            <span class="preview-button"></span>
+          </div>
+
+          <div class="preview-image"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="preview-card preview-card-one">
+      <span>✓</span>
+      Mobile Friendly
+    </div>
+
+    <div class="preview-card preview-card-two">
+      <span>✓</span>
+      Fast Loading
+    </div>
+  </div>
 </section>
 
   <section class="section what-you-get">
@@ -234,6 +216,16 @@
 
   </div>
 </section>
+
+<section class="section dark">
+    <h2>Why Work With Me?</h2>
+    <p>
+      Most small businesses do not need a huge, expensive website. They need something clean, fast, mobile-friendly, and easy for customers to understand.
+    </p>
+    <p>
+      My goal is to give local businesses an affordable online presence that looks professional and helps people reach out.
+    </p>
+  </section>
 
 <section class="how-it-works">
   <div class="how-header">
@@ -456,111 +448,6 @@ closeBtn.addEventListener("click", () => {
     announcement.style.display = "none";
     localStorage.setItem("announcementClosed", "true");
 });
-</script>
-<script>
-  const showcase = document.querySelector(".premium-showcase");
-  const browser = document.querySelector("#websiteBrowser");
-  const title = document.querySelector("#showcaseTitle");
-  const description = document.querySelector("#showcaseDescription");
-
-  const showcaseScenes = [
-    {
-      start: 0,
-      title: "Your business deserves more than a basic website.",
-      description:
-        "Every website is designed to look professional, load quickly, and work beautifully on every screen."
-    },
-    {
-      start: 0.36,
-      title: "Designed for phones, tablets, and desktops.",
-      description:
-        "Responsive layouts automatically adjust so customers get a polished experience wherever they find you."
-    },
-    {
-      start: 0.7,
-      title: "Built to turn attention into action.",
-      description:
-        "Clear messaging, strong calls to action, and simple contact options help visitors become real customers."
-    }
-  ];
-
-  let activeScene = -1;
-  let ticking = false;
-
-  function updateShowcase() {
-    if (!showcase || !browser) return;
-
-    const rect = showcase.getBoundingClientRect();
-    const scrollableDistance = showcase.offsetHeight - window.innerHeight;
-
-    let progress = -rect.top / scrollableDistance;
-    progress = Math.max(0, Math.min(1, progress));
-
-    const scale = 0.76 + progress * 0.28;
-    const rotateX = 8 - progress * 8;
-    const rotateY = -10 + progress * 10;
-    const translateY = 28 - progress * 28;
-
-    const isMobile = window.matchMedia("(max-width: 600px)").matches;
-
-if (isMobile) {
-  const mobileScale = 0.88 + progress * 0.08;
-
-  browser.style.transform = `scale(${mobileScale})`;
-  browser.style.webkitTransform = `scale(${mobileScale})`;
-} else {
-  browser.style.transform = `
-    translateY(${translateY}px)
-    scale(${scale})
-    rotateX(${rotateX}deg)
-    rotateY(${rotateY}deg)
-  `;
-}
-
-    let nextScene = 0;
-
-    showcaseScenes.forEach((scene, index) => {
-      if (progress >= scene.start) {
-        nextScene = index;
-      }
-    });
-
-    if (nextScene !== activeScene) {
-      activeScene = nextScene;
-
-      title.style.opacity = "0";
-      title.style.transform = "translateY(12px)";
-      description.style.opacity = "0";
-      description.style.transform = "translateY(12px)";
-
-      setTimeout(() => {
-        title.textContent = showcaseScenes[nextScene].title;
-        description.textContent = showcaseScenes[nextScene].description;
-
-        title.style.opacity = "1";
-        title.style.transform = "translateY(0)";
-        description.style.opacity = "1";
-        description.style.transform = "translateY(0)";
-      }, 180);
-    }
-
-    ticking = false;
-  }
-
-  function requestShowcaseUpdate() {
-    if (!ticking) {
-      requestAnimationFrame(updateShowcase);
-      ticking = true;
-    }
-  }
-
-  window.addEventListener("scroll", requestShowcaseUpdate, {
-    passive: true
-  });
-
-  window.addEventListener("resize", requestShowcaseUpdate);
-
-  updateShowcase();
 </script>
 
 </body>
