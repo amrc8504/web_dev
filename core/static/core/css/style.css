@@ -1382,3 +1382,139 @@ footer{
     transition: none;
   }
 }
+
+/* =====================================
+   PREMIUM SHOWCASE — MOBILE FIX
+===================================== */
+
+@media (max-width: 600px) {
+
+  .premium-showcase {
+    min-height: 190vh;
+  }
+
+  .showcase-sticky {
+    min-height: 100vh;
+    min-height: 100svh;
+    height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 70px 18px 35px;
+    gap: 28px;
+
+    overflow: hidden;
+  }
+
+  .showcase-heading {
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .showcase-label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .showcase-heading h2 {
+    font-size: clamp(1.85rem, 8vw, 2.35rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+
+  .showcase-heading > p:last-child {
+    max-width: 360px;
+    margin: 0 auto;
+
+    font-size: 0.93rem;
+    line-height: 1.55;
+  }
+
+  .website-stage {
+    width: 100%;
+    min-height: 0;
+  }
+
+  .website-browser {
+    width: min(94vw, 430px);
+    max-width: 100%;
+
+    border-radius: 14px;
+
+    transform:
+      scale(0.82)
+      rotateX(5deg)
+      rotateY(-5deg);
+  }
+
+  .website-glow {
+    width: 80%;
+    opacity: 0.45;
+    filter: blur(65px);
+  }
+
+  .browser-bar {
+    height: 34px;
+    padding: 0 10px;
+    gap: 8px;
+  }
+
+  .browser-content {
+    height: calc(100% - 34px);
+  }
+
+  .browser-address {
+    max-width: 70%;
+    padding: 3px 7px;
+    font-size: 0.52rem;
+  }
+
+  .browser-dots {
+    gap: 5px;
+  }
+
+  .browser-dots span {
+    width: 7px;
+    height: 7px;
+  }
+
+  .mock-navbar {
+    height: 14%;
+    padding: 0 7%;
+  }
+
+  .mock-logo {
+    font-size: 0.54rem;
+  }
+
+  .mock-links {
+    gap: 6px;
+  }
+
+  .mock-links span {
+    width: 18px;
+    height: 4px;
+  }
+
+  .mock-hero {
+    height: 62%;
+    gap: 6%;
+    padding: 6%;
+  }
+
+  .mock-features {
+    height: 24%;
+    gap: 3%;
+    padding: 0 6% 6%;
+  }
+
+  .mock-features div {
+    border-radius: 8px;
+  }
+}
