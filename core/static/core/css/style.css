@@ -1393,3 +1393,47 @@ footer{
     padding-bottom: 7%;
   }
 }
+
+/* =====================================
+   IOS / MOBILE PERFORMANCE FIX
+===================================== */
+
+@media (max-width: 600px) {
+
+  .website-stage {
+    perspective: none !important;
+  }
+
+  .website-glow {
+    display: none !important;
+  }
+
+  .website-browser {
+    transform: scale(0.9) !important;
+    will-change: auto !important;
+
+    box-shadow:
+      0 18px 45px rgba(0, 0, 0, 0.28) !important;
+
+    -webkit-transform: scale(0.9) !important;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .showcase-heading h2,
+  .showcase-heading > p:last-child {
+    transition: none !important;
+  }
+
+  .premium-showcase {
+    background: #0d1320 !important;
+  }
+
+  .mock-features {
+    display: none !important;
+  }
+
+  .mock-hero {
+    height: 86% !important;
+  }
+}
