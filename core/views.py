@@ -13,6 +13,7 @@ def home(request):
 
         name = request.POST.get("name")
         business = request.POST.get("business")
+        state = request.POST.get("state")
         phone = request.POST.get("phone")
         email = request.POST.get("email")
         message = request.POST.get("message")
@@ -20,9 +21,10 @@ def home(request):
         send_discord_notification(
             name,
             business,
+            state,
             phone,
             email,
-            message
+            message,
         )
 
         messages.success(request, "Your request was sent successfully. I’ll get back to you within one business day.")

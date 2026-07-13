@@ -557,6 +557,23 @@ footer{
   gap: 20px;
 }
 
+.contact-form select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  color: #172033;
+  font: inherit;
+  cursor: pointer;
+}
+
+.contact-form select:focus {
+  outline: none;
+  border-color: #c2410c;
+  box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.12);
+}
+
 .form-group {
   display: flex;
   flex-direction: column;
@@ -1451,5 +1468,42 @@ footer{
 @media (max-width: 390px) {
   .preview-card {
     display: none;
+  }
+}
+
+/* State selector */
+.form-group select {
+  display: block;
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 42px 14px 16px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+
+  background-color: #ffffff;
+  color: #1f2937;
+
+  font-family: inherit;
+  font-size: 1rem;
+
+  appearance: auto;
+  -webkit-appearance: menulist;
+
+  opacity: 1;
+  visibility: visible;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(194, 65, 12, 0.12);
+}
+
+@media (max-width: 600px) {
+  .form-group select {
+    width: 100%;
+    min-width: 0;
+    font-size: 16px;
   }
 }
