@@ -37,6 +37,7 @@ ALLOWED_HOSTS = [
     "web-dev-b9b2.onrender.com",
     "regionwebllc.com",
     "www.regionwebllc.com",
+    "127.0.0.1",
 ]
 
 RENDER_EXTERNAL_HOSTNAME = os.getenv("RENDER_EXTERNAL_HOSTNAME")
