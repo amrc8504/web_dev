@@ -610,7 +610,7 @@ Region Web builds affordable, professional, mobile-friendly websites for small b
     {% if messages %}
   <div class="message-wrapper">
     {% for message in messages %}
-      <div class="success-message">
+      <div class="message {{ message.tags }}">
         {{ message }}
       </div>
     {% endfor %}
@@ -723,8 +723,40 @@ Region Web builds affordable, professional, mobile-friendly websites for small b
         <label for="message">What do you need? *</label>
         <textarea id="message" name="message" rows="5" placeholder="Tell me about your business and what you want your website to do..." required></textarea>
       </div>
+      
+      <div class="form-group full checkbox-group">
 
-      <button type="submit" class="btn form-btn" id="submitBtn">Request a Free Quote</button>
+  <label class="checkbox-label">
+
+    <input
+      type="checkbox"
+      id="legal_agreement"
+      name="legal_agreement"
+      required
+    >
+
+    <span>
+      I have read and agree to the
+      <a href="{% url 'privacy' %}" target="_blank" rel="noopener">
+        Privacy Policy
+      </a>
+      and
+      <a href="{% url 'terms' %}" target="_blank" rel="noopener">
+        Terms of Service
+      </a>.
+    </span>
+
+  </label>
+
+</div>
+
+<button
+  type="submit"
+  class="btn form-btn"
+  id="submitBtn"
+>
+  Request a Free Quote
+</button>
 
       <p class="form-note">
         No spam. No pressure. Just a simple conversation about your website.

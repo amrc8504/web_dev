@@ -17,6 +17,14 @@ def home(request):
         phone = request.POST.get("phone")
         email = request.POST.get("email")
         message = request.POST.get("message")
+        legal_agreement = request.POST.get("legal_agreement")
+
+        if not legal_agreement:
+            messages.error(
+                request,
+                "You must accept the Privacy Policy and Terms of Service."
+            )
+            return redirect("/#contact")
 
         send_discord_notification(
             name,
@@ -28,7 +36,7 @@ def home(request):
         )
 
         messages.success(request, "Your request was sent successfully. I’ll get back to you within one business day.")
-        return redirect("home")
+        return redirect("/#contact")
 
     return render(request, "core/home.html")
 
