@@ -158,12 +158,11 @@
     </button>
 
     <div class="nav-links" id="navLinks">
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
+      <a href="{% url 'home' %}#services">Services</a>
+      <a href="{% url 'home' %}#portfolio">Portfolio</a>
+      <a href="{% url 'home' %}#pricing">Pricing</a>
 
-      <a href="#contact" class="nav-cta">
+      <a href="{% url 'home' %}#contact" class="nav-cta">
         Get a Free Quote
       </a>
     </div>
@@ -209,7 +208,7 @@
         Northwest Indiana and across the United States.
       </p>
 
-      <a href="#contact" class="footer-cta">
+      <a href="{% url 'home' %}#contact" class="footer-cta">
         Start Your Website
       </a>
 
@@ -219,20 +218,20 @@
     <div class="footer-column">
       <h3>Explore</h3>
 
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
+      <a href="{% url 'home' %}#services">Services</a>
+      <a href="{% url 'home' %}#portfolio">Portfolio</a>
+      <a href="{% url 'home' %}#pricing">Pricing</a>
+      <a href="{% url 'home' %}#contact">Contact</a>
     </div>
 
 
     <div class="footer-column">
       <h3>Services</h3>
 
-      <a href="#services">Landing Pages</a>
-      <a href="#services">Business Websites</a>
-      <a href="#services">Hosting & Updates</a>
-      <a href="#contact">Request a Quote</a>
+      <a href="{% url 'home' %}#services">Landing Pages</a>
+      <a href="{% url 'home' %}#services">Business Websites</a>
+      <a href="{% url 'home' %}#services">Hosting & Updates</a>
+      <a href="{% url 'home' %}#contact">Request a Quote</a>
     </div>
 
 
