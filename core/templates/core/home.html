@@ -93,7 +93,7 @@
 
   <link
     rel="stylesheet"
-    href="{% static 'core/css/style.css' %}?v=13"
+    href="{% static 'core/css/style.css' %}?v=14"
   >
 
   <script type="application/ld+json">
@@ -186,25 +186,194 @@
 </section>
 
   <section id="services" class="section">
-    <h2>What I Can Build For You</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Landing Pages</h3>
-        <p>A clean one-page website that shows who you are, what you offer, and how customers can contact you.</p>
-      </div>
-      <div class="card">
-        <h3>Business Websites</h3>
-        <p>
-  Professional websites for contractors, barbers, photographers, cleaners,
-  restaurants, and service-based businesses anywhere in the United States.
-</p>
-      </div>
-      <div class="card">
-        <h3>Hosting & Updates</h3>
-        <p>Need help keeping your website online and updated? I can handle the technical side for you.</p>
+  <h2>What I Can Build For You</h2>
+
+  <div class="cards">
+
+    <!-- Landing Pages -->
+    <div class="card service-build-card scroll-card">
+      <h3>Landing Pages</h3>
+
+      <p>
+        A clean one-page website that shows who you are, what you
+        offer, and how customers can contact you.
+      </p>
+
+      <div class="css-phone service-art" aria-hidden="true">
+        <div class="phone-screen">
+
+          <div class="phone-topbar">
+            <div class="phone-pill"></div>
+
+            <div class="phone-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="phone-content">
+            <div class="phone-copy">
+              <span class="phone-line line-one"></span>
+              <span class="phone-line line-two"></span>
+              <span class="phone-line line-three"></span>
+
+              <div class="phone-buttons">
+                <span class="phone-button primary"></span>
+                <span class="phone-button secondary"></span>
+              </div>
+            </div>
+
+            <div class="phone-portrait"></div>
+          </div>
+
+          <div class="phone-section"></div>
+
+        </div>
       </div>
     </div>
-  </section>
+
+
+    <!-- Business Websites -->
+    <div class="card service-build-card scroll-card">
+      <h3>Business Websites</h3>
+
+      <p>
+        Professional websites for contractors, barbers, photographers,
+        cleaners, restaurants, and service-based businesses anywhere
+        in the United States.
+      </p>
+
+      <div class="business-site-art service-art" aria-hidden="true">
+
+        <div class="desktop-browser">
+
+          <div class="desktop-browser-bar">
+            <div class="desktop-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="desktop-address"></div>
+          </div>
+
+          <div class="desktop-navbar">
+            <div class="desktop-logo"></div>
+
+            <div class="desktop-links">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="desktop-hero">
+
+            <div class="desktop-copy">
+              <span class="desktop-line desktop-line-small"></span>
+              <span class="desktop-line desktop-line-large"></span>
+              <span class="desktop-line desktop-line-medium"></span>
+              <span class="desktop-text-line"></span>
+              <span class="desktop-text-line short"></span>
+
+              <div class="desktop-button"></div>
+            </div>
+
+            <div class="desktop-image"></div>
+
+          </div>
+
+          <div class="desktop-feature-row">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+
+        <div class="desktop-stand">
+          <span></span>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Hosting & Updates -->
+    <div class="card service-build-card scroll-card">
+      <h3>Hosting & Updates</h3>
+
+      <p>
+        Need help keeping your website online and updated? I can
+        handle the technical side for you.
+      </p>
+
+      <div class="hosting-art service-art" aria-hidden="true">
+
+        <div class="hosting-cloud">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="server-stack">
+
+          <div class="server-unit">
+            <div class="server-lights">
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="server-slots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="server-unit">
+            <div class="server-lights">
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="server-slots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="server-unit">
+            <div class="server-lights">
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="server-slots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hosting-gear">
+          <span class="gear-center"></span>
+        </div>
+
+        <div class="hosting-status">
+          <span></span>
+          Website Online
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <section class="premium-preview">
   <div class="premium-preview-copy">
@@ -737,6 +906,29 @@ closeBtn.addEventListener("click", () => {
     announcement.style.display = "none";
     localStorage.setItem("announcementClosed", "true");
 });
+</script>
+
+<script>
+  const serviceCards = document.querySelectorAll(".scroll-card");
+
+  const cardObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.18,
+      rootMargin: "0px 0px -50px 0px"
+    }
+  );
+
+  serviceCards.forEach((card) => {
+    cardObserver.observe(card);
+  });
 </script>
 
 </body>
